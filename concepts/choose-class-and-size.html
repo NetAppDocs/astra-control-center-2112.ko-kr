@@ -169,7 +169,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/astra-control-center-2112/issues/new?body=Page%3A%20[스토리지 클래스 및 영구 볼륨 크기](https://docs.netapp.com/ko-kr/astra-control-center-2112/concepts/choose-class-and-size.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/astra-control-center-2112/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a><a target="_blank" href="https://github.com/NetAppDocs/astra-control-center-2112/blob/main/concepts/choose-class-and-size.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/astra-control-center-2112/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/astra-control-center-2112/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/astra-control-center-2112/issues/new?body=Page%3A%20[스토리지 클래스 및 영구 볼륨 크기](https://docs.netapp.com/ko-kr/astra-control-center-2112/concepts/choose-class-and-size.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/astra-control-center-2112/images/discuss-sm.svg" alt="" class="github-icon" />문서 변경 요청</a><a target="_blank" href="https://github.com/NetAppDocs/astra-control-center-2112/blob/main/concepts/choose-class-and-size.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/astra-control-center-2112/images/edit-sm.svg" alt="" class="github-icon" />이 페이지 편집</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/astra-control-center-2112/images/article-sm.svg" alt="" class="github-icon" />기여하는 방법 자세히 알아보기</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">이 페이지의 내용</div>
@@ -258,11 +258,13 @@
           <div id="react-search" 
           data-search-html="/ko-kr/astra-control-center-2112/search.html"
           data-type="widget" 
-          data-placeholder="설명서 검색" 
-          data-no-results-found="{query}에 대한 결과를 찾을 수 없음" 
-          data-did-you-mean="{suggestion}을(를) 검색해보십시오." 
-          data-no-results-found-did-you-mean="{query}에 대한 결과를 찾을 수 없습니다. {suggestion}을(를) 검색하려 하셨습니까?" 
-          data-results-found="{hitCount}개의 결과를 찾음"  
+          data-placeholder="설명서 검색"
+          data-no-results-found="{query}에 대한 결과를 찾을 수 없음"
+          data-did-you-mean="{suggestion}을(를) 검색해보십시오."
+          data-no-results-found-did-you-mean="{query}에 대한 결과를 찾을 수 없습니다. {suggestion}을(를) 검색하려 하셨습니까?"
+          data-results-found="{hitCount}개의 결과를 찾음"
+          data-error-message="We're sorry, an issue occurred when fetching your results. Please try again."
+          data-error-reset="Reset Search"
           data-sk-es-pf-indexes=""
           data-flavor=""></div>
           <button class="n-property-bar__search-toggle-button" type="button">
@@ -277,35 +279,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">한국어</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">한국어</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/astra-control-center-2112/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/astra-control-center-2112/concepts/choose-class-and-size.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/astra-control-center-2112/concepts/choose-class-and-size.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/astra-control-center-2112/concepts/choose-class-and-size.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/astra-control-center-2112/concepts/choose-class-and-size.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/astra-control-center-2112/concepts/choose-class-and-size.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/ko-kr/astra-control-center-2112/concepts/choose-class-and-size.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/astra-control-center-2112/concepts/choose-class-and-size.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/astra-control-center-2112/concepts/choose-class-and-size.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/astra-control-center-2112/concepts/choose-class-and-size.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/astra-control-center-2112/concepts/choose-class-and-size.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -349,7 +343,7 @@
   <div class="col-md-3" id="sidebar-height">
       <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
-    <img src="/ko-kr/astra-control-center-2112/images/pdf.png" width="16" height="16"/>사용 가능한 PDF<span>
+    <img src="/ko-kr/astra-control-center-2112/images/pdf.png" alt="" width="16" height="16"/>사용 가능한 PDF<span>
     </span>
   </a>
 </div>
@@ -359,7 +353,7 @@
         
         
         <a target="_blank" href="/ko-kr/astra-control-center-2112/pdfs/fullsite-sidebar/Astra_Control_Center_21_12_문서.pdf" >
-          <img src="/ko-kr/astra-control-center-2112/images/pdf.png" width="16" height="16"/>이 문서 사이트의 PDF</a>
+          <img src="/ko-kr/astra-control-center-2112/images/pdf.png" alt="" width="16" height="16"/>이 문서 사이트의 PDF</a>
 
 
 
@@ -374,7 +368,7 @@
               href="/ko-kr/astra-control-center-2112/pdfs/sidebar/릴리스_정보.pdf" 
             
           >
-            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" alt="" width="16" height="16"/>
             릴리스 정보
           </a>
           
@@ -388,8 +382,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -409,7 +401,7 @@
               href="/ko-kr/astra-control-center-2112/pdfs/sidebar/개념.pdf" 
             
           >
-            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" alt="" width="16" height="16"/>
             개념
           </a>
           
@@ -421,19 +413,10 @@
 
 
 
-    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
-  <a target="_blank" href="/ko-kr/astra-control-center-2112/pdfs/pages/concepts/choose-class-and-size.pdf" >
-    <img src="/ko-kr/astra-control-center-2112/images/pdf.png" width="16" height="16"/>
-    PDF of this page
-  </a>
-</li>
-
-</ul>
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
   
 
 
-
-          
         </li>
       </ul>
     
@@ -453,7 +436,7 @@
               href="/ko-kr/astra-control-center-2112/pdfs/sidebar/시작하십시오.pdf" 
             
           >
-            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" alt="" width="16" height="16"/>
             시작하십시오
           </a>
           
@@ -473,7 +456,7 @@
               href="/ko-kr/astra-control-center-2112/pdfs/sidebar/설치_개요.pdf" 
             
           >
-            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" alt="" width="16" height="16"/>
             설치 개요
           </a>
           
@@ -481,8 +464,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -502,7 +483,7 @@
               href="/ko-kr/astra-control-center-2112/pdfs/sidebar/Astra_Control_Center를_설정합니다.pdf" 
             
           >
-            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" alt="" width="16" height="16"/>
             Astra Control Center를 설정합니다
           </a>
           
@@ -510,8 +491,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -521,8 +500,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -542,7 +519,7 @@
               href="/ko-kr/astra-control-center-2112/pdfs/sidebar/Astra를_사용하십시오.pdf" 
             
           >
-            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" alt="" width="16" height="16"/>
             Astra를 사용하십시오
           </a>
           
@@ -558,7 +535,7 @@
               href="/ko-kr/astra-control-center-2112/pdfs/sidebar/앱_관리.pdf" 
             
           >
-            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" alt="" width="16" height="16"/>
             앱 관리
           </a>
           
@@ -566,8 +543,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -587,7 +562,7 @@
               href="/ko-kr/astra-control-center-2112/pdfs/sidebar/앱_보호.pdf" 
             
           >
-            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" alt="" width="16" height="16"/>
             앱 보호
           </a>
           
@@ -611,14 +586,12 @@
               href="/ko-kr/astra-control-center-2112/pdfs/sidebar/앱_실행_후크_관리.pdf" 
             
           >
-            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" alt="" width="16" height="16"/>
             앱 실행 후크 관리
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -626,8 +599,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -647,7 +618,7 @@
               href="/ko-kr/astra-control-center-2112/pdfs/sidebar/앱_및_클러스터_상태_보기.pdf" 
             
           >
-            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" alt="" width="16" height="16"/>
             앱 및 클러스터 상태 보기
           </a>
           
@@ -657,8 +628,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -678,7 +647,7 @@
               href="/ko-kr/astra-control-center-2112/pdfs/sidebar/계정을_관리합니다.pdf" 
             
           >
-            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" alt="" width="16" height="16"/>
             계정을 관리합니다
           </a>
           
@@ -692,8 +661,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -715,8 +682,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -736,14 +701,12 @@
               href="/ko-kr/astra-control-center-2112/pdfs/sidebar/REST_API를_사용하여_자동화.pdf" 
             
           >
-            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" alt="" width="16" height="16"/>
             REST API를 사용하여 자동화
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -763,7 +726,7 @@
               href="/ko-kr/astra-control-center-2112/pdfs/sidebar/애플리케이션_구축.pdf" 
             
           >
-            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" alt="" width="16" height="16"/>
             애플리케이션 구축
           </a>
           
@@ -775,8 +738,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -796,7 +757,7 @@
               href="/ko-kr/astra-control-center-2112/pdfs/sidebar/지식_및_지원.pdf" 
             
           >
-            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/astra-control-center-2112/images/pdf.png" alt="" width="16" height="16"/>
             지식 및 지원
           </a>
           
@@ -804,8 +765,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -816,11 +775,10 @@
 
 
 
-
 </li></ul>
   <div class="zip-pdf-link-container" style="display: none;">   
     <a href="#" id="zipPdf">
-      <img src="/ko-kr/astra-control-center-2112/images/pdf-zip.png" width="16" height="16"/>
+      <img src="/ko-kr/astra-control-center-2112/images/pdf-zip.png" alt="" width="16" height="16"/>
       <pre>별도의 PDF 문서 모음<span class="zip-size"></span></pre>
     </a><div id="zip-link-popup" class="hide">
     <div class="inner-modal">
@@ -853,7 +811,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-control-center-2112/index.html">
         Astra Control Center 21.12 문서
       </a></li><li class="subfolders "><a href="/ko-kr/astra-control-center-2112/release-notes/rn_overview.html">
@@ -1275,4 +1233,5 @@ Trident 스토리지 클래스는 Astra Control Center 외부에서 사전 구�
     </script>
     <script src='/ko-kr/astra-control-center-2112/js/www-ntap.js'></script>
     <script src='/ko-kr/astra-control-center-2112/js/tabbed-blocks.js'></script>
+    <script src='/ko-kr/astra-control-center-2112/js/sidebar.js'></script>
   </body></html>
