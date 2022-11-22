@@ -55,15 +55,15 @@ IMPORTANT: 모든 Astra Control Center POD를 삭제하지 않도록 설치 과�
 
 Astra Control Center를 설치하려면 다음 단계를 수행하십시오.
 
-* <<Download the Astra Control Center bundle>>
-* <<Unpack the bundle and change directory>>
-* <<Add the images to your local registry>>
-* <<Set up namespace and secret for registries with auth requirements>>
-* <<Install the Astra Control Center operator>>
-* <<Configure Astra Control Center>>
-* <<Complete Astra Control Center and operator installation>>
-* <<Verify system status>>
-* <<Log in to the Astra Control Center UI>>
+*  the Astra Control Center bundle
+*  the bundle and change directory
+*  the images to your local registry
+*  up namespace and secret for registries with auth requirements
+*  the Astra Control Center operator
+*  Astra Control Center
+*  Astra Control Center and operator installation
+*  system status
+*  in to the Astra Control Center UI
 
 
 를 수행하여 배포를 완료합니다 link:setup_overview.html["설정 작업"].
@@ -250,8 +250,8 @@ vim astra_control_center_operator_deploy.yaml
 imagePullSecrets:
 - name: <name_of_secret_with_creds_to_local_registry>
 ----
-.. kuby-RBAC-proxy 이미지의 [your_registry_path]를 이미지를 에서 푸시한 레지스트리 경로로 변경합니다 <<substep_image_local_registry_push,이전 단계>>.
-.. "acc-operator-controller-manager" 이미지의 [your_registry_path]를 이미지를 에서 푸시한 레지스트리 경로로 변경합니다 <<substep_image_local_registry_push,이전 단계>>.
+.. kuby-RBAC-proxy 이미지의 [your_registry_path]를 이미지를 에서 푸시한 레지스트리 경로로 변경합니다 ,이전 단계.
+.. "acc-operator-controller-manager" 이미지의 [your_registry_path]를 이미지를 에서 푸시한 레지스트리 경로로 변경합니다 ,이전 단계.
 .. (Astra Data Store Preview를 사용하여 설치하는 경우) 와 관련된 알려진 문제를 참조하십시오 link:../release-notes/known-issues-ads.html#astra-data-store-cannot-be-used-as-a-storage-class-for-astra-control-center-due-to-mongodb-pod-liveness-probe-failure["스토리지 클래스 프로비저닝 및 YAML에 대한 추가 변경 사항"].
 +
 [listing, subs="+quotes"]
@@ -351,8 +351,8 @@ IMPORTANT: 인증이 필요 없는 레지스트리를 사용하는 경우 imageR
 +
 .. '[your_registry_path]'를 이전 단계에서 이미지를 푸시한 레지스트리 경로로 변경합니다.
 .. accountName 문자열을 계정과 연결할 이름으로 변경합니다.
-.. Astra에 액세스하기 위해 브라우저에서 사용할 FQDN으로 "astraAddress" 문자열을 변경합니다. 주소에 http:// 또는 https:// 를 사용하지 마십시오. 에서 사용하기 위해 이 FQDN을 복사합니다 <<Log in to the Astra Control Center UI,나중에>>.
-.. e-메일 문자열을 기본 초기 관리자 주소로 변경합니다. 에서 사용할 이 이메일 주소를 복사합니다 <<Log in to the Astra Control Center UI,나중에>>.
+.. Astra에 액세스하기 위해 브라우저에서 사용할 FQDN으로 "astraAddress" 문자열을 변경합니다. 주소에 http:// 또는 https:// 를 사용하지 마십시오. 에서 사용하기 위해 이 FQDN을 복사합니다  in to the Astra Control Center UI,나중에.
+.. e-메일 문자열을 기본 초기 관리자 주소로 변경합니다. 에서 사용할 이 이메일 주소를 복사합니다  in to the Astra Control Center UI,나중에.
 .. 인터넷 연결이 없는 사이트의 경우 AutoSupport에 등록된 사이트를 거짓으로 변경하거나 연결된 사이트의 경우 "참"으로 변경합니다.
 .. (선택 사항) 계정과 연결된 사용자의 이름 "FirstName"과 성 "LastName"을 추가합니다. UI 내에서 이 단계를 지금 또는 나중에 수행할 수 있습니다.
 .. (선택 사항) 설치에 필요한 경우 'torageClass' 값을 다른 Astra Trident StorageClass 리소스로 변경하십시오.
@@ -758,13 +758,13 @@ metadata:
 Astra Control Center를 설치한 후 기본 관리자의 암호를 변경하고 Astra Control Center UI 대시보드에 로그인합니다.
 
 .단계
-. 브라우저에서, Astra_control_center_min YAML'cr when의 astraAddress에 사용한 FQDN을 입력한다 <<Install Astra Control Center,Astra Control Center를 설치했습니다>>.
+. 브라우저에서, Astra_control_center_min YAML'cr when의 astraAddress에 사용한 FQDN을 입력한다  Astra Control Center,Astra Control Center를 설치했습니다.
 . 메시지가 표시되면 자체 서명된 인증서를 수락합니다.
 +
 
 NOTE: 로그인 후 사용자 지정 인증서를 만들 수 있습니다.
 
-. Astra Control Center 로그인 페이지에서 Astra_control_center_min YAML CR when에 e-mail에 사용한 값을 입력합니다 <<Install Astra Control Center,Astra Control Center를 설치했습니다>>1회 암호('ACC-[UUID]')를 입력합니다.
+. Astra Control Center 로그인 페이지에서 Astra_control_center_min YAML CR when에 e-mail에 사용한 값을 입력합니다  Astra Control Center,Astra Control Center를 설치했습니다1회 암호('ACC-[UUID]')를 입력합니다.
 +
 
 NOTE: 잘못된 암호를 세 번 입력하면 15분 동안 관리자 계정이 잠깁니다.
