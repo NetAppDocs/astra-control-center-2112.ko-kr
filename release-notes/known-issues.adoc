@@ -16,25 +16,25 @@ summary: 알려진 문제점은 이 제품 릴리스를 성공적으로 사용�
 
 현재 릴리즈에는 다음과 같은 알려진 문제가 영향을 줍니다.
 
-*  with user-defined label goes into "removed" state
-*  to stop running app backup
-*  app restore from backup Trident creates a larger PV than the original PV
-*  performance impacted by large persistent volumes
-*  clones fail using a specific version of PostgreSQL
-*  clones fail when using Service Account level OCP Security Context Constraints (SCC)
-*  buckets between instances of Astra Control Center causes failures
-*  a bucket provider type with credentials for another type causes data protection failures
-*  and snapshots might not be retained during removal of an Astra Control Center instance
+* <<사용자 정의 라벨이 있는 앱은 "제거됨" 상태로 전환됩니다>>
+* <<앱 백업 실행을 중지할 수 없습니다>>
+* <<백업 Trident에서 앱을 복원하는 동안 원본 PV보다 더 큰 PV가 생성됩니다>>
+* <<대규모 영구 볼륨의 클론 성능에 영향을 줍니다>>
+* <<특정 버전의 PostgreSQL을 사용하여 앱 클론이 실패합니다>>
+* <<서비스 계정 수준 OCP SCC(Security Context Constraints)를 사용할 때 앱 클론이 실패함>>
+* <<Astra Control Center 인스턴스 간에 버킷을 재사용하면 오류가 발생합니다>>
+* <<다른 유형에 대한 자격 증명이 있는 버킷 공급자 유형을 선택하면 데이터 보호 장애가 발생합니다>>
+* <<Astra Control Center 인스턴스를 제거하는 동안 백업 및 스냅샷이 보존되지 않을 수 있습니다>>
 * link:known-issues.html#clone-operation-cant-use-other-buckets-besides-the-default["클론 작업에서는 기본값 외에 다른 버킷을 사용할 수 없습니다"]
-*  a cluster with Astra Control Center fails when default kubeconfig file contains more than one context
-*  internal service error when attempting Trident app data management
-*  app execution hook scripts time out and cause post-snapshot scripts not to execute
+* <<기본 kubecononfig 파일에 컨텍스트가 두 개 이상 포함되어 있으면 Astra Control Center를 사용하여 클러스터를 관리할 수 없습니다>>
+* <<Trident 앱 데이터 관리를 시도할 때 500 내부 서비스 오류가 발생했습니다>>
+* <<사용자 지정 앱 실행 후크 스크립트가 시간 초과되어 스냅샷 후 스크립트가 실행되지 않습니다>>
 * link:known-issues.html#cant-determine-asup-tar-bundle-status-in-scaled-environment["스케일된 환경에서 ASUP tar 번들 상태를 확인할 수 없습니다"]
-*  eventually begin to fail when using external-snapshotter version 4.2.0
-*  app restore operations in the same namespace can fail
-*  fails if source version uses a container image registry that does not require authentication and target version uses a container image registry that requires authentication
-*  of Astra Control Center fails to clean up the monitoring-operator pod on the managed cluster
-*  of Astra Control Center fails to clean up Traefik CRDs
+* <<외부 스냅샷 버전 4.2.0 사용 시 결국 스냅숏이 실패하기 시작합니다>>
+* <<동일한 네임스페이스에서 앱 복원 작업을 동시에 수행하는 데 실패할 수 있습니다>>
+* <<소스 버전에서 인증이 필요하지 않은 컨테이너 이미지 레지스트리를 사용하고 대상 버전에서 인증이 필요한 컨테이너 이미지 레지스트리를 사용하는 경우 업그레이드가 실패합니다>>
+* <<Astra Control Center를 제거해도 관리 클러스터의 모니터링 운영자 포드가 정리되지 않습니다>>
+* <<Astra Control Center를 제거해도 Traefik CRD가 정리되지 않습니다>>
 
 
 
@@ -99,7 +99,7 @@ OCP 클러스터의 네임스페이스 내에서 서비스 계정 수준에서 �
 
 
 
-== 클론 작업은 기본값 외에 다른 버킷을 사용할 수 없습니다
+== 클론 작업에서는 기본값 외에 다른 버킷을 사용할 수 없습니다
 
 애플리케이션 백업 또는 애플리케이션 복구 중에 버킷 ID를 선택적으로 지정할 수 있습니다. 그러나 애플리케이션 클론 작업에서는 항상 정의된 기본 버킷을 사용합니다. 클론의 버킷을 변경할 수 있는 옵션은 없습니다. 어떤 버킷이 사용되는지 제어하려는 경우 이 두 가지 방법을 사용할 수 있습니다 link:../use/manage-buckets.html#edit-a-bucket["버킷 기본값을 변경합니다"] 또는 을 수행합니다 link:../use/protect-apps.html#create-a-backup["백업"] 뒤에 가 있습니다 link:../use/restore-apps.html["복원"] 별도.
 

@@ -76,7 +76,7 @@ Astra Control은 "pass-by-reference" 아키텍처(예: CockroachDB 운영자)로
 
 
 
-== 클러스터와 네트워크가 예상대로 작동하고 있지만 클러스터가 제거된 상태입니다
+== 클러스터가 에 있습니다 `removed` 상태는 클러스터 및 네트워크가 예상대로 작동하고 있는지 확인합니다
 
 클러스터가 "이동된" 상태에 있지만 클러스터 및 네트워크 연결이 양호한 것으로 나타나는 경우(Kubernetes API를 사용하여 클러스터에 액세스하려는 외부 시도가 성공한 경우), Astra Control에 제공한 kubeconfig는 더 이상 유효하지 않을 수 있습니다. 클러스터의 인증서 순환 또는 만료 때문일 수 있습니다. 이 문제를 해결하려면 을 사용하여 Astra Control의 클러스터와 연결된 자격 증명을 업데이트하십시오 link:https://docs.netapp.com/us-en/astra-automation/index.html["Astra Control API를 참조하십시오"]:
 

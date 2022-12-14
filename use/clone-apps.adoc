@@ -35,6 +35,7 @@ OpenShift 클러스터에서 앱을 호스팅하기 위한 프로젝트를 만�
 OC new-project WordPress OC adm policy add-SCC-to-group anyuid system:serviceaccounts:WordPress의 OC adm policy add-SCC-to-user privileged-z default-n WordPress
 
 ====
+.필요한 것
 앱을 다른 클러스터로 클론 복제하려면 기본 버킷이 필요합니다. 첫 번째 버킷을 추가하면 기본 버킷을 사용할 수 있습니다.
 
 .단계
@@ -59,6 +60,7 @@ OC new-project WordPress OC adm policy add-SCC-to-group anyuid system:serviceacc
 . * 클론 요약 *: 클론에 대한 세부 정보를 검토하고 * 클론 * 을 선택합니다.
 
 
+.결과
 Astra Control Center는 사용자가 제공한 정보를 기반으로 해당 앱을 복제합니다. 새 앱 클론이 * 응용 프로그램 * 페이지의 "사용 가능" 상태가 되면 클론 작업이 성공적으로 수행됩니다.
 
 

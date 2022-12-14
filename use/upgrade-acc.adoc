@@ -13,7 +13,7 @@ summary: Astra Control Center를 업그레이드하려면 설명된 단계에 �
 
 Astra Control Center를 업그레이드하려면 NetApp Support 사이트에서 설치 번들을 다운로드하고 해당 지침에 따라 Astra Control Center 구성 요소를 업그레이드하십시오. 이 절차를 사용하여 인터넷에 연결되거나 공기가 연결된 환경에서 Astra Control Center를 업그레이드할 수 있습니다.
 
-.무엇을 &#8217;필요로 할거야
+.필요한 것
 * link:../get-started/requirements.html["업그레이드를 시작하기 전에 운영 환경이 Astra Control Center 배포에 대한 최소 요구 사항을 충족하는지 확인하십시오"].
 * 모든 클러스터 운영자가 양호한 상태이며 사용 가능한지 확인합니다.
 +
@@ -36,15 +36,16 @@ oc get apiservices
 * Astra Control Center에서 로그아웃합니다.
 
 
+.이 작업에 대해
 Astra Control Center 업그레이드 프로세스는 다음과 같은 고급 단계를 안내합니다.
 
-*  the Astra Control Center bundle
-*  the bundle and change directory
-*  the images to your local registry
-*  the updated Astra Control Center operator
-*  Astra Control Center
-*  third-party services
-*  system status
+* <<Astra Control Center 번들을 다운로드합니다>>
+* <<번들의 포장을 풀고 디렉토리를 변경합니다>>
+* <<이미지를 로컬 레지스트리에 추가합니다>>
+* <<업데이트된 Astra Control Center 운영자를 설치합니다>>
+* <<Astra Control Center를 업그레이드합니다>>
+* <<타사 서비스를 업그레이드합니다>>
+* <<시스템 상태를 확인합니다>>
 
 
 
@@ -142,8 +143,8 @@ vim astra_control_center_operator_deploy.yaml
 imagePullSecrets:
 - name: <name_of_secret_with_creds_to_local_registry>
 ----
-.. kuby-RBAC-proxy 이미지의 [your_registry_path]를 이미지를 에서 푸시한 레지스트리 경로로 변경합니다 ,이전 단계.
-.. "acc-operator-controller-manager" 이미지의 [your_registry_path]를 이미지를 에서 푸시한 레지스트리 경로로 변경합니다 ,이전 단계.
+.. kuby-RBAC-proxy 이미지의 [your_registry_path]를 이미지를 에서 푸시한 레지스트리 경로로 변경합니다 <<substep_image_local_registry_push,이전 단계>>.
+.. "acc-operator-controller-manager" 이미지의 [your_registry_path]를 이미지를 에서 푸시한 레지스트리 경로로 변경합니다 <<substep_image_local_registry_push,이전 단계>>.
 
 
 +
@@ -229,7 +230,7 @@ kubectl edit acc -n [netapp-acc or custom namespace]
 ----
 +
 
-NOTE: Astra Control Center 업그레이드를 위해서는 Astra 버전을 변경해야 합니다. 레지스트리 경로는 에서 이미지를 푸시한 레지스트리 경로와 일치해야 합니다 ,이전 단계.
+NOTE: Astra Control Center 업그레이드를 위해서는 Astra 버전을 변경해야 합니다. 레지스트리 경로는 에서 이미지를 푸시한 레지스트리 경로와 일치해야 합니다 <<substep_image_local_registry_push,이전 단계>>.
 
 . 포드가 종료되고 다시 사용 가능한지 확인합니다.
 +
@@ -356,9 +357,9 @@ conditions:
 
 타사 서비스 Traefik 및 Cert-manager는 이전 업그레이드 단계 중에 업그레이드되지 않습니다. 여기에 설명된 절차를 사용하여 필요에 따라 업그레이드하거나 시스템에 필요한 경우 기존 서비스 버전을 유지할 수 있습니다. 권장되는 Traefik 및 Certs-manager 업그레이드 순서는 다음과 같습니다.
 
-.  up acc-helm-repo to upgrade Traefik and Cert-manager
-.  Traefik service using acc-helm-repo
-.  the Cert-manager service
+. <<Traefik 및 Cert-manager를 업그레이드하기 위해 acc-helm-repo를 설정합니다>>
+. <<acc-helm-repo를 사용하여 Traefik 서비스를 업데이트합니다>>
+. <<인증서 관리자 서비스를 업데이트합니다>>
 
 
 
@@ -459,7 +460,7 @@ python3.7 ./set_previous_values.py
 == acc-helm-repo를 사용하여 Traefik 서비스를 업데이트합니다
 
 
-NOTE: 이미 이(가) 있어야 합니다  up acc-helm-repo to upgrade Traefik and Cert-manager,acc-helm-repo 설정 다음 절차를 완료하기 전에
+NOTE: 이미 이(가) 있어야 합니다 <<Traefik 및 Cert-manager를 업그레이드하기 위해 acc-helm-repo를 설정합니다,acc-helm-repo 설정>> 다음 절차를 완료하기 전에
 
 . GNU wget과 같은 안전한 파일 전송 도구를 사용하여 Traefik 번들을 다운로드합니다.
 +
@@ -539,7 +540,7 @@ TEST SUITE: None
 == 인증서 관리자 서비스를 업데이트합니다
 
 
-NOTE: 을(를) 이미 완료해야 합니다  Traefik service using acc-helm-repo,Traefik 업데이트 및  up acc-helm-repo to upgrade Traefik and Cert-manager,Helm에 acc-helm-repo 추가 다음 절차를 완료하기 전에
+NOTE: 을(를) 이미 완료해야 합니다 <<acc-helm-repo를 사용하여 Traefik 서비스를 업데이트합니다,Traefik 업데이트>> 및 <<Traefik 및 Cert-manager를 업그레이드하기 위해 acc-helm-repo를 설정합니다,Helm에 acc-helm-repo 추가>> 다음 절차를 완료하기 전에
 
 . 업그레이드된 인증서 관리자에 사용할 Helm Chart 버전을 찾습니다.
 +
