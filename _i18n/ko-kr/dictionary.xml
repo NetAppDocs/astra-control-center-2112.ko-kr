@@ -1368,7 +1368,6 @@
   <block id="4d40a8e178faea46fe31329801bc6573" category="list-text">* 이미지 레지스트리 *: Astra Control Center 빌드 이미지를 푸시할 수 있는 기존 개인 Docker 이미지 레지스트리가 있어야 합니다. 이미지를 업로드할 이미지 레지스트리의 URL을 제공해야 합니다.</block>
   <block id="df819717a2baf5b48925d2b4cdaf4745" category="list-text">* Astra Trident/ONTAP 구성 *: Astra Control Center를 사용하려면 스토리지 클래스를 생성하고 기본 스토리지 클래스로 설정해야 합니다. Astra Control Center는 Astra Trident에서 제공하는 다음과 같은 ONTAP 드라이버를 지원합니다.</block>
   <block id="8321592ce24c8a122ecf26a63cfca407" category="list-text">ONTAP - NAS</block>
-  <block id="844e84da8e822b4a33c4d8188da97937" category="list-text">ONTAP-NAS-Flexgroup입니다</block>
   <block id="73a3350a1b91aeb6e2836fdf5975672c" category="list-text">ONTAP-SAN</block>
   <block id="3016c12c1db45f14c80c9c1731b9c26a" category="list-text">ONTAP-SAN - 경제성</block>
   <block id="a194c96c412e6851d927b9d0e77bba07" category="paragraph">OpenShift 환경에서 앱을 복제하는 동안, Astra Control Center는 OpenShift가 볼륨을 마운트하고 파일 소유권을 변경할 수 있도록 허용해야 합니다. 따라서 이러한 작업을 허용하려면 ONTAP 볼륨 내보내기 정책을 구성해야 합니다. 다음 명령을 사용하여 이 작업을 수행할 수 있습니다.</block>
@@ -1823,4 +1822,12 @@
   <block id="50b2dc093d74b71cb482308eb930fb02" category="section-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> 재해가 발생할 경우 앱을 복원합니다</block>
   <block id="53c5fac0ba78b08ca3f0a270b746c5d2" category="section-title">다른 사용자의 암호를 재설정합니다</block>
   <block id="edb74efc05972c268b6cccf83996ac3e" category="section-title">사용자의 역할을 변경합니다</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
 </blocks>
