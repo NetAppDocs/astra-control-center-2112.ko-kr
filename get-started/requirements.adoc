@@ -199,7 +199,7 @@ Astra Control Center를 호스팅하는 운영 환경은 다음 TCP 포트를 �
 | Astra 제어 센터 | Amazon S3 스토리지 버킷 공급자  | 443 | HTTPS | Amazon S3 스토리지 통신 
 
 
-| Astra 제어 센터 | NetApp ActiveIQ  | 443 | HTTPS | NetApp ActiveIQ 커뮤니케이션 
+| Astra 제어 센터 | 디지털 자문업체(https://activeiq.solidfire.com[]) | 443 | HTTPS | 디지털 어드바이저 통신 
 |===
 
 
